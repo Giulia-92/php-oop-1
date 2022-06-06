@@ -2,23 +2,23 @@
 require_once __DIR__ .'/movies/movie.php';
 
 
-$titanic = new Movie('Titanic','romantico');
-echo $titanic -> getTitle();
-$ritorno_al_futuro = new Movie ('Ritorno a futuro','commedia');
+/*$titanic = new Movie('Titanic','romantico');
+echo $titanic->getTitle();
+$ritorno_al_futuro = new Movie('Ritorno a futuro','commedia');
+*/
 $movies = [
     [ 
-        'title' => 'Titanic'
+        'title' => 'Titanic',
         'genre' => 'romantico'
     ],
     [ 
-        'title' => 'Ritorno al futuro'
+        'title' => 'Ritorno al futuro',
         'genre' => 'commedia'
     ]
     
-    ];
+];
 
-var_dump($titanic);
-var_dump($);
+
 
 ?>
 
@@ -42,16 +42,15 @@ var_dump($);
         $movie = new Movie($value['title'], $value['genre']);
 
     ?>
-    <h2> title: <?php echo $movie ->getMovie(); ?></h2>
+    <h2> title: <?php echo $movie->getTitle(); ?></h2>
 
-    <h6> genre: <?php echo "{
-        $movie->getMovie()}" ?></h6>
+    <h4> genre: <?php echo "{$movie->getGenre()}" ?></h4>
 
 <?php
     }
 ?>
 
 
-    ?>
+    
 </body>
 </html>
